@@ -17,7 +17,8 @@ pipeline {
                 deleteDir()
                 
                 // Checkout avec les credentials Jenkins configurés
-                checkout scm
+                //checkout scm
+                git url: 'https://github.com/simoks/java-maven.git'
             }
         }
         stage('Build & Test') {
