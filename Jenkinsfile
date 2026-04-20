@@ -8,7 +8,7 @@ pipeline {
     }
     options {
         // Supprime le workspace automatiquement avant chaque build
-        skipDefaultCheckout(false)
+        skipDefaultCheckout(true)
     }
     stages {
         stage('Checkout') {
