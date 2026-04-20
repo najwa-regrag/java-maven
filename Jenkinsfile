@@ -8,19 +8,10 @@ pipeline {
     }
     options {
         // Supprime le workspace automatiquement avant chaque build
-        skipDefaultCheckout(true)
+        skipDefaultCheckout(false)
     }
     stages {
-        stage('Checkout') {
-            steps {
-                // Nettoyer le workspace proprement
-                //deleteDir()
-                
-                // Checkout avec les credentials Jenkins configurés
-                //checkout scm
-                git url: 'https://github.com/simoks/java-maven.git', branch: 'main'
-            }
-        }
+        
         stage('Debug Git') {
             steps {
                 sh 'pwd'
