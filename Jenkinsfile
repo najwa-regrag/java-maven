@@ -18,7 +18,7 @@ pipeline {
                 
                 // Checkout avec les credentials Jenkins configurés
                 //checkout scm
-                git url: 'https://github.com/simoks/java-maven.git'
+                git url: 'https://github.com/simoks/java-maven.git', branch: 'main'
             }
         }
         stage('Debug Git') {
