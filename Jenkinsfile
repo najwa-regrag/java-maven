@@ -21,6 +21,13 @@ pipeline {
                 git url: 'https://github.com/simoks/java-maven.git'
             }
         }
+        stage('Debug Git') {
+            steps {
+                sh 'pwd'
+                sh 'ls -la'
+                sh 'git status || echo "NO GIT REPO"'
+            }
+        }
         stage('Build & Test') {
             steps {
                 script {
