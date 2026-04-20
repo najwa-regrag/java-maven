@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Nettoyer le workspace proprement
-                deleteDir()
+                //deleteDir()
                 
                 // Checkout avec les credentials Jenkins configurés
                 //checkout scm
